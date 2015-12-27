@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Functions supporting maintenance of a cached variable 
+## to store the inverse value of a matrix.
 
-## Write a short comment describing this function
-
+## makeCacheMatrix is a function returning a list of functions to allow
+## maintenance of a matrix variable holding the inverse of 
+## a matrix.  
 makeCacheMatrix <- function(x = matrix()) {
   
   inv <- NULL
@@ -20,7 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve returns the inverse of the matrix which is passed in 
+## as an object defined by the makeCacheMatrix function.  The cached 
+## result is returned if it exists.  It is assumed that an inverse to
+## the passed matrix exists.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
